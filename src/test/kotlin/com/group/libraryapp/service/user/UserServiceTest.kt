@@ -4,7 +4,6 @@ import com.group.libraryapp.domain.user.User
 import com.group.libraryapp.domain.user.UserRepository
 import com.group.libraryapp.dto.user.request.UserCreateRequest
 import com.group.libraryapp.dto.user.request.UserUpdateRequest
-import org.assertj.core.api.Assertions
 import org.assertj.core.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -59,8 +58,8 @@ class UserServiceTest @Autowired constructor(
     @Test
     fun 유저_이름을_업데이트한다() {
         // given
-        val user = userRepository.save(User("A", 20))
-        val request = UserUpdateRequest(user.id, "B")
+        val savedUser = userRepository.save(User("A", 20))
+        val request = UserUpdateRequest(savedUser.id!!, "B")
 
         // when
         userService.updateUserName(request)
