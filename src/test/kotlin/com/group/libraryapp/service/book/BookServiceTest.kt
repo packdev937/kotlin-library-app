@@ -49,7 +49,11 @@ class BookServiceTest @Autowired constructor(
     fun 책을_대출한다() {
         // given
         val user = userRepository.save(User("백건우", 24))
-        val book = bookRepository.save(Book("클린 코드"))
+        val book = bookRepository.save(
+            Book(
+                "클린 코드"
+            )
+        )
         val request = BookLoanRequest(user.name, book.name)
 
         // when
@@ -67,7 +71,11 @@ class BookServiceTest @Autowired constructor(
     fun 대출이_있다면_신규_대출이_실패한다() {
         // given
         val user = userRepository.save(User("백건우", 24))
-        val book = bookRepository.save(Book("클린 코드"))
+        val book = bookRepository.save(
+            Book(
+                "클린 코드"
+            )
+        )
         val request = BookLoanRequest(user.name, book.name)
         bookService.loanBook(request)
 
@@ -81,7 +89,11 @@ class BookServiceTest @Autowired constructor(
     fun 대출을_반납한다() {
         // given
         val user = userRepository.save(User("백건우", 24))
-        val book = bookRepository.save(Book("클린 코드"))
+        val book = bookRepository.save(
+            Book(
+                "클린 코드"
+            )
+        )
         val request = BookLoanRequest(user.name, book.name)
         bookService.loanBook(request)
 
