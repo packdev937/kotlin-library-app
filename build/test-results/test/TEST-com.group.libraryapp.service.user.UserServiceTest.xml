@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.group.libraryapp.service.user.UserServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-01-01T06:14:50" hostname="Gundorit-MacBook.local" time="0.116">
+  <properties/>
+  <testcase name="유저를_삭제한다()" classname="com.group.libraryapp.service.user.UserServiceTest" time="0.037"/>
+  <testcase name="유저를_저장한다()" classname="com.group.libraryapp.service.user.UserServiceTest" time="0.019"/>
+  <testcase name="유저를_조회한다()" classname="com.group.libraryapp.service.user.UserServiceTest" time="0.029"/>
+  <testcase name="유저_이름을_업데이트한다()" classname="com.group.libraryapp.service.user.UserServiceTest" time="0.025"/>
+  <system-out><![CDATA[2024-01-01 15:14:50.437  INFO 79232 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.group.libraryapp.service.user.UserServiceTest], using SpringBootContextLoader
+2024-01-01 15:14:50.441  INFO 79232 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.group.libraryapp.service.user.UserServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-01-01 15:14:50.443  INFO 79232 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.group.libraryapp.service.user.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-01-01 15:14:50.453  INFO 79232 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.group.libraryapp.LibraryAppApplication for test class com.group.libraryapp.service.user.UserServiceTest
+2024-01-01 15:14:50.457  INFO 79232 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-01-01 15:14:50.458  INFO 79232 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@650e6569, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4a10e65b, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@311eb725, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7a791e8b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6c4a1980, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2125086c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@65c634f2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@57f9f387, org.springframework.test.context.event.EventPublishingTestExecutionListener@6b4376e1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@622c658d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3619bc9e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2e640411, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5e609b42, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5fe19d0e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@24673720]
+Hibernate: 
+    select
+        user0_.id as id1_3_,
+        user0_.age as age2_3_,
+        user0_.name as name3_3_ 
+    from
+        user user0_
+Hibernate: 
+    select
+        userloanhi0_.user_id as user_id4_4_0_,
+        userloanhi0_.id as id1_4_0_,
+        userloanhi0_.id as id1_4_1_,
+        userloanhi0_.book_name as book_nam2_4_1_,
+        userloanhi0_.is_return as is_retur3_4_1_,
+        userloanhi0_.user_id as user_id4_4_1_ 
+    from
+        user_loan_history userloanhi0_ 
+    where
+        userloanhi0_.user_id=?
+Hibernate: 
+    delete 
+    from
+        user_loan_history 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        user 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        user
+        (id, age, name) 
+    values
+        (default, ?, ?)
+Hibernate: 
+    select
+        user0_.id as id1_3_,
+        user0_.age as age2_3_,
+        user0_.name as name3_3_ 
+    from
+        user user0_ 
+    where
+        user0_.name=?
+Hibernate: 
+    select
+        userloanhi0_.user_id as user_id4_4_0_,
+        userloanhi0_.id as id1_4_0_,
+        userloanhi0_.id as id1_4_1_,
+        userloanhi0_.book_name as book_nam2_4_1_,
+        userloanhi0_.is_return as is_retur3_4_1_,
+        userloanhi0_.user_id as user_id4_4_1_ 
+    from
+        user_loan_history userloanhi0_ 
+    where
+        userloanhi0_.user_id=?
+Hibernate: 
+    delete 
+    from
+        user 
+    where
+        id=?
+Hibernate: 
+    select
+        user0_.id as id1_3_,
+        user0_.age as age2_3_,
+        user0_.name as name3_3_ 
+    from
+        user user0_
+Hibernate: 
+    select
+        user0_.id as id1_3_,
+        user0_.age as age2_3_,
+        user0_.name as name3_3_ 
+    from
+        user user0_
+Hibernate: 
+    insert 
+    into
+        user
+        (id, age, name) 
+    values
+        (default, ?, ?)
+Hibernate: 
+    select
+        user0_.id as id1_3_,
+        user0_.age as age2_3_,
+        user0_.name as name3_3_ 
+    from
+        user user0_
+Hibernate: 
+    select
+        user0_.id as id1_3_,
+        user0_.age as age2_3_,
+        user0_.name as name3_3_ 
+    from
+        user user0_
+Hibernate: 
+    select
+        userloanhi0_.user_id as user_id4_4_0_,
+        userloanhi0_.id as id1_4_0_,
+        userloanhi0_.id as id1_4_1_,
+        userloanhi0_.book_name as book_nam2_4_1_,
+        userloanhi0_.is_return as is_retur3_4_1_,
+        userloanhi0_.user_id as user_id4_4_1_ 
+    from
+        user_loan_history userloanhi0_ 
+    where
+        userloanhi0_.user_id=?
+Hibernate: 
+    delete 
+    from
+        user 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        user
+        (id, age, name) 
+    values
+        (default, ?, ?)
+Hibernate: 
+    insert 
+    into
+        user
+        (id, age, name) 
+    values
+        (default, ?, ?)
+Hibernate: 
+    select
+        user0_.id as id1_3_,
+        user0_.age as age2_3_,
+        user0_.name as name3_3_ 
+    from
+        user user0_
+Hibernate: 
+    select
+        user0_.id as id1_3_,
+        user0_.age as age2_3_,
+        user0_.name as name3_3_ 
+    from
+        user user0_
+Hibernate: 
+    select
+        userloanhi0_.user_id as user_id4_4_0_,
+        userloanhi0_.id as id1_4_0_,
+        userloanhi0_.id as id1_4_1_,
+        userloanhi0_.book_name as book_nam2_4_1_,
+        userloanhi0_.is_return as is_retur3_4_1_,
+        userloanhi0_.user_id as user_id4_4_1_ 
+    from
+        user_loan_history userloanhi0_ 
+    where
+        userloanhi0_.user_id=?
+Hibernate: 
+    select
+        userloanhi0_.user_id as user_id4_4_0_,
+        userloanhi0_.id as id1_4_0_,
+        userloanhi0_.id as id1_4_1_,
+        userloanhi0_.book_name as book_nam2_4_1_,
+        userloanhi0_.is_return as is_retur3_4_1_,
+        userloanhi0_.user_id as user_id4_4_1_ 
+    from
+        user_loan_history userloanhi0_ 
+    where
+        userloanhi0_.user_id=?
+Hibernate: 
+    delete 
+    from
+        user 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        user 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        user
+        (id, age, name) 
+    values
+        (default, ?, ?)
+Hibernate: 
+    select
+        user0_.id as id1_3_0_,
+        user0_.age as age2_3_0_,
+        user0_.name as name3_3_0_ 
+    from
+        user user0_ 
+    where
+        user0_.id=?
+Hibernate: 
+    update
+        user 
+    set
+        age=?,
+        name=? 
+    where
+        id=?
+Hibernate: 
+    select
+        user0_.id as id1_3_,
+        user0_.age as age2_3_,
+        user0_.name as name3_3_ 
+    from
+        user user0_
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
