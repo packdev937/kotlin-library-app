@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.group.libraryapp.calculator.CalculatorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-01-01T06:39:52" hostname="Gundorit-MacBook.local" time="0.12">
+<testsuite name="com.group.libraryapp.calculator.CalculatorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-01-02T07:47:04" hostname="Gundorit-MacBook.local" time="0.069">
   <properties/>
-  <testcase name="곱셈()" classname="com.group.libraryapp.calculator.CalculatorTest" time="0.094"/>
+  <testcase name="곱셈()" classname="com.group.libraryapp.calculator.CalculatorTest" time="0.06"/>
   <testcase name="덧셈()" classname="com.group.libraryapp.calculator.CalculatorTest" time="0.001"/>
-  <testcase name="뺄셈()" classname="com.group.libraryapp.calculator.CalculatorTest" time="0.001"/>
+  <testcase name="뺄셈()" classname="com.group.libraryapp.calculator.CalculatorTest" time="0.0"/>
   <testcase name="나눗셈()" classname="com.group.libraryapp.calculator.CalculatorTest" time="0.0"/>
-  <testcase name="나눗셈은_0으로_나눌_수_없다()" classname="com.group.libraryapp.calculator.CalculatorTest" time="0.015"/>
+  <testcase name="나눗셈은_0으로_나눌_수_없다()" classname="com.group.libraryapp.calculator.CalculatorTest" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
